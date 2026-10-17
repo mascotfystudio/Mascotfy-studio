@@ -3,11 +3,11 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useAuth } from '../contexts/AuthContext';
 import { LEVEL_LABELS } from '../types';
 
-function goHome() {
-  window.location.href = '/';
+interface NavbarProps {
+  onGoHome: () => void;
 }
 
-export default function Navbar() {
+export default function Navbar({ onGoHome }: NavbarProps) {
   const { preference, setPreference } = useTheme();
   const { profile, logout } = useAuth();
 
@@ -41,7 +41,7 @@ export default function Navbar() {
 
       <div className="navbar-inner">
         <div className="navbar-brand">
-          <button type="button" className="navbar-home" onClick={goHome} aria-label="Voltar ao início">
+          <button type="button" className="navbar-home" onClick={onGoHome} aria-label="Voltar ao início">
             <img
               src="/favicon-mascotfy-v1.png"
               alt=""
