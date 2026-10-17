@@ -1,8 +1,11 @@
 import { Sun, Moon, Laptop, LogOut } from 'lucide-react';
-import MascotfyLogo from './MascotfyLogo';
 import { useTheme } from '../contexts/ThemeContext';
 import { useAuth } from '../contexts/AuthContext';
 import { LEVEL_LABELS } from '../types';
+
+function goHome() {
+  window.location.href = '/';
+}
 
 export default function Navbar() {
   const { preference, setPreference } = useTheme();
@@ -10,10 +13,46 @@ export default function Navbar() {
 
   return (
     <header className="navbar">
+      <style>{`
+        .navbar-home {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: none;
+          border: 1px solid transparent;
+          border-radius: 10px;
+          padding: 4px 8px;
+          margin-left: -8px;
+          cursor: pointer;
+          color: inherit;
+          font: inherit;
+          font-weight: 700;
+          transition: background 0.15s, border-color 0.15s;
+        }
+        .navbar-home:hover {
+          background: var(--bg-secondary, rgba(124, 53, 233, 0.08));
+          border-color: var(--border, rgba(124, 53, 233, 0.25));
+        }
+        .navbar-home:focus-visible {
+          outline: 2px solid #7c35e9;
+          outline-offset: 2px;
+        }
+      `}</style>
+
       <div className="navbar-inner">
         <div className="navbar-brand">
-          <MascotfyLogo size={28} />
+          <button type="button" className="navbar-home" onClick={goHome} aria-label="Voltar ao início">
+            <img
+              src="/favicon-mascotfy-v1.png"
+              alt=""
+              width={28}
+              height={28}
+              style={{ width: 28, height: 28, borderRadius: 8, objectFit: 'cover', display: 'block' }}
+            />
+            <span>Mascotfy Studio</span>
+          </button>
         </div>
+
         <div className="row gap-md">
           <div className="theme-toggle" role="group" aria-label="Alternar tema">
             <button
