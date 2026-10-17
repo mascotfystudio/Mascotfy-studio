@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import MascotfyLogo from '../components/MascotfyLogo';
 
 export default function LoginView() {
   const { login, loginError, clearLoginError, resetPassword, unauthorized } = useAuth();
@@ -44,7 +43,13 @@ export default function LoginView() {
     <div className="login-page">
       <div className="login-card">
         <div className="stack" style={{ alignItems: 'center', marginBottom: 22 }}>
-          <MascotfyLogo size={46} withWordmark={false} />
+          <img
+            src="/favicon-mascotfy-v1.png"
+            alt="Logo Mascotfy Studio"
+            width={46}
+            height={46}
+            style={{ width: 46, height: 46, borderRadius: 12, objectFit: 'cover', display: 'block' }}
+          />
           <h2 style={{ marginTop: 12 }}>Mascotfy Studio</h2>
           <p className="text-sm">Gestão de Vídeos de Mascotes 3D</p>
         </div>
