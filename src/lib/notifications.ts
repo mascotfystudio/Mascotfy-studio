@@ -1,4 +1,4 @@
-const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1560351712122900571/Tdbb_o1ectMLUT_G_cOs0NATzTx6HCi_vp-8wZSb7Pt6QiZrLd5c7FicbJJ5Kv2D278a'; 
+const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1561837725139607572/7R0YyjjaIS3BHIZrofCmxA2ZfgKJDAkazUtZK0cwmWckh--K3LrRhIoZbvNieRsCaC_O'; 
 const TELEGRAM_BOT_TOKEN = '8827925242:AAFnGCL8YglMl_DSU4ksMegH-d7aMUFcjR4';
 const TELEGRAM_CHAT_ID = '803132170';
 

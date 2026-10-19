@@ -44,14 +44,14 @@ export default function LoginView() {
       <div className="login-card">
         <div className="stack" style={{ alignItems: 'center', marginBottom: 22 }}>
           <img
-            src="/favicon-mascotfy-v1.png"
-            alt="Logo Mascotfy Studio"
+            src="/icone-creatfy-v3.png"
+            alt="Logo Creatfy Studio"
             width={46}
             height={46}
             style={{ width: 46, height: 46, borderRadius: 12, objectFit: 'cover', display: 'block' }}
           />
-          <h2 style={{ marginTop: 12 }}>Mascotfy Studio</h2>
-          <p className="text-sm">Gestão de Vídeos de Mascotes 3D</p>
+          <h2 style={{ marginTop: 12, letterSpacing: '-0.02em' }}>Creatfy Studio</h2>
+          <p className="text-sm">Gestão Profissional de Vídeos</p>
         </div>
 
         {unauthorized && (

@@ -34,7 +34,7 @@ export default function Navbar({ onGoHome }: NavbarProps) {
           border-color: var(--border, rgba(124, 53, 233, 0.25));
         }
         .navbar-home:focus-visible {
-          outline: 2px solid #7c35e9;
+          outline: 2px solid var(--primary, #7c35e9);
           outline-offset: 2px;
         }
       `}</style>
@@ -43,13 +43,13 @@ export default function Navbar({ onGoHome }: NavbarProps) {
         <div className="navbar-brand">
           <button type="button" className="navbar-home" onClick={onGoHome} aria-label="Voltar ao início">
             <img
-              src="/favicon-mascotfy-v1.png"
+              src="/icone-creatfy-v3.png"
               alt=""
               width={28}
               height={28}
               style={{ width: 28, height: 28, borderRadius: 8, objectFit: 'cover', display: 'block' }}
             />
-            <span>Mascotfy Studio</span>
+            <span>Creatfy Studio</span>
           </button>
         </div>
 
